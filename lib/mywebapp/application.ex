@@ -10,7 +10,7 @@ defmodule Mywebapp.Application do
     children = [
       # Starts a worker by calling: Mywebapp.Worker.start_link(arg)
       # {Mywebapp.Worker, arg},
-      Plug.Adapters.Cowboy.child_spec(scheme: :http, plug: SimpleServer.Router, options: [port: 8085])
+      Plug.Adapters.Cowboy.child_spec(scheme: :http, plug: SimpleServer.Router, options: [port: Settings.port])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
