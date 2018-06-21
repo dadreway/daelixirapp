@@ -26,7 +26,8 @@ defmodule Mywebapp.MixProject do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
       {:cowboy, "~> 1.0.0"},
       {:plug, "~> 1.5"},
-      {:poison, "~> 3.1"}
+      {:poison, "~> 3.1"},
+      {:env_helper, "~> 0.0.2"}
     ]
   end
 end
