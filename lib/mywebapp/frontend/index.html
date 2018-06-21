@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport"   content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Playfair+Display" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+        <title>Elixir TSV parser</title>
+    </head>
+    <body class="bodyLightGreyBG container-fluid">
+
+            <nav class="navbar navbar-dark bg-dark justify-content-center">
+                    <a class="navbar-brand" href="#">
+                      <img src="https://vector.me/files/images/6/9/699619/honda.png" width="50" height="50" alt="">
+                    </a>
+            </nav>
+        <div>
+            <img src="https://di-uploads-pod2.dealerinspire.com/harmonyhonda/uploads/2015/05/2015-Honda-Civic-Sedan-Banner.jpg" width="100%">
+            <br>
+            <center><h3 >A list of the best selling honda models.</h3></center>
+
+
+        </div>
+        <div class="row">
+            <%= for car <- carinfo do %>
+                <div class="col-md-3" style="float: none; margin: 0 auto;">
+                    <div class="card bg-light mb-3" style="width: 18rem;">
+                        <img class="card-img-top" src="imgassets/<%= Map.get(elem(car, 1), :picture) %>">
+
+                        <div class="card-body">
+                            <div class="content">
+                                <h5 class="card-title">Model name: <%= Map.get(elem(car, 1), :modelname) %></h5>
+                                <p class="card-text">First year of production: <%= Map.get(elem(car, 1), :firstyear) %></p>
+                                <p class="card-text">Production status: <%= Map.get(elem(car, 1), :status) %></p>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+                <br>
+            <% end %>
+        </div>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
