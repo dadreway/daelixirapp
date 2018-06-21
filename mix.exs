@@ -27,6 +27,7 @@ defmodule Mywebapp.MixProject do
       {:cowboy, "~> 1.0.0"},
       {:plug, "~> 1.5"},
       {:poison, "~> 3.1"},
+      {:remix, "~> 0.0.1"},
       {:env_helper, "~> 0.0.2"}
     ]
   end
